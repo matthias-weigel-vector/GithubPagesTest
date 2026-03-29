@@ -1,0 +1,1 @@
+name: Generate Pages\n\non: push:\n  branches:\n    - main\n\njobs:\n  generate:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout code\n        uses: actions/checkout@v2\n      - name: Run generate_pages script\n        run: python scripts/generate_pages.py\n
